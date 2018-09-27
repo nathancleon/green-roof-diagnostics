@@ -55,15 +55,16 @@ header {
 
 .copy-header {
   font-size: 2rem;
-  font-family: 'Roboto';
+  font-family: 'Open Sans';
   text-align: center;
   color: #444;
 }
 
 .copy-text {
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-family: 'Merriweather';
   text-align: justify;
+  line-height: 28px;
   color: #444;
 }
 
@@ -73,7 +74,7 @@ header {
 
 .content-img-src {
   width: 100%;
-  border-radius: 5px;
+  border-radius: 2px;
   box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.3);
 }
 
@@ -97,17 +98,18 @@ header {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  height: 550px;
+  height: 600px;
   width: 350px;
   padding: 50px;
+  padding-top: 60px;
   border: 1px solid #ddd;
   border-radius: 5px;
   background-color: #fff;
 }
 
 .image-cropper {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   position: relative;
   overflow: hidden;
   border-radius: 50%;
@@ -122,7 +124,7 @@ header {
 
 .card-name {
   font-size: 1.5rem;
-  font-family: 'Roboto';
+  font-family: 'Open Sans';
   text-align: center;
   color: #555;
 }
@@ -130,7 +132,7 @@ header {
 .card-title {
   margin-top: -5px;
   font-size: 1rem;
-  font-family: 'Roboto';
+  font-family: 'Open Sans';
   text-align: center;
   color: #777;
 }
@@ -138,8 +140,8 @@ header {
 .card-content {
   margin: 0 auto;
   margin-top: 20px;
-  width: 90%;
-  font-family: 'Roboto';
+  width: 80%;
+  font-family: 'Open Sans';
   color: #777;
   text-align: left;
   line-height: 30px;
@@ -153,7 +155,7 @@ header {
   background-color: rgb(221, 0, 0);
   border-radius: 5px;
   color: #fff;
-  font-family: 'Roboto';
+  font-family: 'Open Sans';
   font-size: 1rem;
   cursor: pointer;
 }
@@ -161,3 +163,132 @@ header {
 .btn:hover {
   background-color: rgb(255, 0, 0);
 }
+
+.resources-title {
+  font-family: 'Open Sans';
+  font-size: 2rem;
+  color: #444;
+  margin-left: 80px;
+  margin-top: 100px;
+}
+
+.resource-cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 100px;
+}
+
+.resource-card {
+  margin-left: 0;
+  height: 450px;
+  width: 380px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 30px;
+}
+
+.reference-title {
+  margin: 0 auto;
+  margin-top: 10px;
+  font-family: 'Open Sans';
+  font-size: 1.25rem;
+  text-decoration: none;
+  color: #555;
+}
+
+.reference-src {
+  margin: 0 auto;
+  margin-top: 10px;
+  font-family: 'Open Sans';
+  font-size: 1rem;
+  color: #777;
+}
+
+.reference-content {
+  margin-top: 15px;
+  margin-bottom: 35px;
+  font-family: 'Merriweather';
+  line-height: 35px;
+  color: #656565;
+}
+
+.reference-link {
+  display: block;
+  margin: 0 auto;
+  padding-top: 8px;
+  text-align: center;
+  text-decoration: none;
+  height: 40px;
+  width: 115px;
+  background-color: #888;
+  border-radius: 5px;
+  color: #fff;
+  font-family: 'Open Sans';
+  cursor: pointer;
+}
+
+.reference-link:hover {
+  border: 1px solid #ddd;
+  background-color: #fff;
+  color: #888;
+}
+
+.footer {
+  padding: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-content1 {
+}
+
+.footer-title {
+  margin-top: -5px;
+  padding-top: 10px;
+  font-size: 2rem;
+  font-family: 'Open Sans';
+  color: #555;
+}
+
+.footer-address {
+  margin-top: -20px;
+  font-style: normal;
+  font-size: 1.25rem;
+  font-family: 'Open Sans';
+  color: #555;
+}
+
+.address-link {
+  text-decoration: none;
+}
+
+.footer-content2 {
+  margin-top: -20px;
+}
+
+.footer-contact {
+  color: #555;
+  font-size: 1.5rem;
+  font-family: 'Open Sans';
+}
+
+.footer-phone-link {
+  text-decoration: none;
+}
+
+.footer-phone {
+  color: #555;
+  font-family: 'Open Sans';
+}
+
+.footer-email-link {
+  text-decoration: none;
+}
+
+.footer-email {
+  color: #555;
+  font-family: 'Open Sans';
+  text-decoration: none;
+}
+
