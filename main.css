@@ -270,6 +270,10 @@ header {
   width: auto;
 }
 
+.brad-img {
+  height: 200px;
+}
+
 .copy-header {
   font-size: 2rem;
   font-family: 'Open Sans';
