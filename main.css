@@ -291,6 +291,11 @@ header {
   margin: 0 auto;
 }
 
+.copy-emphasis {
+  font-size: 1.2rem;
+  color: #8bad33;
+}
+
 .text-left {
   margin-top: -50px;
 }
