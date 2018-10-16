@@ -8,75 +8,72 @@ $( document ).ready(function() {
 });
 
 function populateDivs() {
+  const  em = '<span class="copy-emphasis">';
+  const _em = '</span>';
   const content = [
     {
-      index:    0, // even = image on right && background color
-      id:       'greening', // id of the section; must be a match
-      title:    'Greening',
+      id:       'content01', // id of the section; must be a match
+      title:    'We start at the top',
       author:   'Charlie Miller, Advisor',
       name:     'Charlie',
       headshot: 'charlie-miller.jpg',
       image:    'g1.jpg',
       quotes: [
-        'Green infrastructure focuses on <span class="copy-emphasis">cost-effective</span>, <span class="copy-emphasis">living</span>, <span class="copy-emphasis">upstream</span> solutions.',
-        'Green infrastructure harnesses the power of nature to provide primary and <span class="copy-emphasis">secondary benefits</span>',
+        `Green infrastructure focuses on cost-effective, living, ${em}upstream${_em} solutions. And there is no-where farther up stream than the roof!`,
+        `${em}<a href='http://bradgarner.com' target='_blank'>Green infrastructure</a>${_em} is so powerful, because it harnesses the power of nature to provide primary and ${em}secondary benefits${_em}`,
       ],
     },
     {
-      index:    1, // odd = image on left && no background color
-      id:       'validating', // id of the section; must be a match
-      title:    'Validating',
-      author:   'Laura Supple, Environmental Engineer',
-      name:     'Laura',
-      headshot: 'laura-supple.jpeg',
-      image:    'i2.jpg',
-      quotes: [
-        'We measure, quantify, and <span class="copy-emphasis">validate</span> the effectiveness of green infrastructure. We think the industry benefits from this <span class="copy-emphasis">de-mystification</span>.',
-        'We help design teams can utilize green roofs <span class="copy-emphasis">confidently</span>, with <span class="copy-emphasis">ROI</span> for the developer and the environment.',
-      ],
-    },
-    {
-      index:    2, // even = image on right && background color
-      id:       'innovating', // id of the section; must be a match
-      title:    'Innovating',
-      author:   'Brad Garner, Software Engineer',
-      name:     'Brad',
-      headshot: 'brad-garner.jpg',
-      image:    'v5.png',
-      quotes: [
-        'Responding and adapting to our climate requires <span class="copy-emphasis">innovation</span>, and the best ideas may come from anywhere!',
-        'We help <span class="copy-emphasis">manufacturers and inventors</span> evaluate their <span class="copy-emphasis">sustainable solutions</span>, through rigorous testing and monitoring.',
-      ],
-    },
-    {
-      index:    3, // odd = image on left && no background color
-      id:       'leading', // id of the section; must be a match
-      title:    'Leading',
+      id:       'content02', // id of the section; must be a match
+      title:    'We lead',
       author:   'Joshua Robinson, Hydrologic Engineer',
       name:     'Joshua',
       headshot: 'joshua-robinson.jpeg',
       image:    'i1.png',
       quotes: [
-        'Green Roof Diagnostics was founded to provide scientific and technical leadership within the green roof industry. Our success is when <span class="copy-emphasis">all sails rise</span>.',
-        '<span class="copy-emphasis">Testing</span> is critical to our work. We test products and concepts from anyone. We try to handle this work in a rigorous, <span class="copy-emphasis">data-driven</span> manner for optimal benefit to all parties.',      
+        `Green Roof Diagnostics was founded to provide scientific and technical leadership within the green roof industry. Our success is when ${em}all sails rise${_em}.`,
+        `${em}Testing${_em} is critical to our work. We test products and concepts from anyone. We try to handle this work in a rigorous, ${em}data-driven${_em} manner for optimal benefit to all parties.`,
       ],
     },
     {
-      index:    4, // even = image on right && background color
-      id:       'living', // id of the section; must be a match
-      title:    'Living',
+      id:       'content03', // id of the section; must be a match
+      title:    'We verify',
+      author:   'Laura Supple, Environmental Engineer',
+      name:     'Laura',
+      headshot: 'laura-supple.jpeg',
+      image:    'i2.jpg',
+      quotes: [
+        `We measure, quantify, and ${em}validate${_em} the effectiveness of green infrastructure. We think the industry benefits from this ${em}de-mystification${_em}.`,
+        `We help design teams can utilize green roofs ${em}confidently${_em}, with ${em}ROI${_em} for the developer and the environment.`,
+      ],
+    },
+    {
+      id:       'content04', // id of the section; must be a match
+      title:    'We take on challenges',
+      author:   'Brad Garner, Software Engineer',
+      name:     'Brad',
+      headshot: 'brad-garner.jpg',
+      image:    'v5.png',
+      quotes: [
+        `Responding and adapting to our climate requires ${em}innovation${_em}, and the best ideas may come from anywhere!`,
+        `We help ${em}manufacturers and inventors${_em} evaluate their ${em}sustainable solutions${_em}, through rigorous testing and monitoring.`,
+      ],
+    },
+    {
+      id:       'content05', // id of the section; must be a match
+      title:    'Our work is alive!',
       author:   'Anna Zakrisson, Soil Biologist',
       name:     'Anna',
       headshot: 'anna-zakrisson.jpg',
       image:    'l1.jpg',
       quotes: [
-        'Green infrastructure is <span class="copy-emphasis">alive!</span>  Our work is holistic, including <span class="copy-emphasis">soil biology</span> and <span class="copy-emphasis">water quality</span>.',
-        'Though synergistic benefits are well understood within larger ecosystems, such as forests and meadows, the biology and chemistry of smaller, more <span class="copy-emphasis">urban ecosystems</span> possesses mysteries we aim to unlock and harness for good.',
+        `Green infrastructure is ${em}alive!${_em}  Our work is holistic, including ${em}soil biology${_em} and ${em}water quality${_em}.`,
+        `Though synergistic benefits are well understood within larger ecosystems, such as forests and meadows, the biology and chemistry of smaller, more ${em}urban ecosystems${_em} possesses mysteries we aim to unlock and harness for good.`,
       ],
     },
   ];
   content.forEach((c,i)=>{
-    const readMore = `<span class="copy-text-read-more" id="${c.id}ReadMore">... read more ...</span>`;
+    const readMore = `<span class="copy-text-read-more" id="${c.id}ReadMore">... read more ...${_em}`;
 
     const quotes = c.quotes.map((q,j)=>{
       if(j === 0) {
