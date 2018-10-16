@@ -266,8 +266,13 @@ header {
 
 .img-round {
   display: block;
-  height: 100%;
-  width: auto;
+  height: 120px;
+  width: 120px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-origin: content-box;
+  background-color: #ccc;
 }
 
 .brad-img {
@@ -281,26 +286,40 @@ header {
   color: #444;
 }
 
+.copy-text-container {
+  display: flex;
+}
+.copy-text-container p {
+  display: inline-block;
+}
+.copy-text-ellipsis-container {
+
+}
 .copy-text {
-  width: 80%;
+  /* width: 80%; */
   font-size: 14px;
   font-family: 'Merriweather';
   text-align: justify;
   line-height: 20px;
   color: #444;
-  margin: 0 auto;
+  /* margin: 0 auto; */
 }
-
+.copy-text-read-more {
+  padding-left: 5px;
+  font-size: 85%;
+  color: #555;
+  font-style: italic;
+}
 .copy-emphasis {
   font-size: 1.2rem;
   color: #8bad33;
 }
 
-.text-left {
+.copy-open-quote {
   margin-top: -50px;
 }
 
-.text-left::before {
+/* .copy-open-quote::before {
   display: block;
   position: relative;
   content: url('data:image/svg+xml;charset=UTF-8, <svg xmlns="http://www.w3.org/2000/svg" fill="#8aad33" viewBox="0 0 512 512"><path d="M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8c-88.4 0-160 71.6-160 160v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48zm-288 0H96v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0 103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48z"/></svg>');
@@ -311,7 +330,7 @@ header {
   z-index: 100;
 }
 
-.text-left::after {
+.copy-close-quote::after {
   display: block;
   position: relative;
   content: url('data:image/svg+xml;charset=UTF-8, <svg xmlns="http://www.w3.org/2000/svg" fill="#8aad33" viewBox="0 0 512 512"><path d="M464 32H336c-26.5 0-48 21.5-48 48v128c0 26.5 21.5 48 48 48h80v64c0 35.3-28.7 64-64 64h-8c-13.3 0-24 10.7-24 24v48c0 13.3 10.7 24 24 24h8c88.4 0 160-71.6 160-160V80c0-26.5-21.5-48-48-48zm-288 0H48C21.5 32 0 53.5 0 80v128c0 26.5 21.5 48 48 48h80v64c0 35.3-28.7 64-64 64h-8c-13.3 0-24 10.7-24 24v48c0 13.3 10.7 24 24 24h8c88.4 0 160-71.6 160-160V80c0-26.5-21.5-48-48-48z"/></svg>');
@@ -319,7 +338,7 @@ header {
   left: 104%;
   margin-top: -20px;
   z-index: 100;
-}
+} */
 
 .content-img {
   width: 45%;
@@ -364,14 +383,14 @@ header {
   background-color: #fff;
 }
 
-.image-cropper {
+/* .image-cropper {
   width: 150px;
   height: 150px;
   position: relative;
   overflow: hidden;
   border-radius: 50%;
   margin: 0 auto;
-}
+} */
 
 .card-img {
   display: block;
@@ -554,3 +573,46 @@ header {
   color: #999;
 }
 
+.content-author-container{
+  display: flex;
+  justify-content: flex-end;
+}
+.content-author {
+  margin-top: 0;
+  text-align: right;
+  font-family: 'Merriweather', serif;
+  color: #c12b5b;
+}
+
+.clickable-ellipses {
+  display: inline-block;
+  padding-left: 2px;
+  color: #555;
+  font-size: 36px;
+}
+
+.content-quote-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.content-quote-container::before {
+  display: block;
+  position: relative;
+  content: url('data:image/svg+xml;charset=UTF-8, <svg xmlns="http://www.w3.org/2000/svg" fill="#8aad33" viewBox="0 0 512 512"><path d="M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8c-88.4 0-160 71.6-160 160v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48zm-288 0H96v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0 103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48z"/></svg>');
+  background-size: 28px 28px;
+  width: 40px;
+  left: -55px;
+  bottom: -15px;
+  z-index: 100;
+}
+
+.content-quote-container::after {
+  display: block;
+  position: relative;
+  content: url('data:image/svg+xml;charset=UTF-8, <svg xmlns="http://www.w3.org/2000/svg" fill="#8aad33" viewBox="0 0 512 512"><path d="M464 32H336c-26.5 0-48 21.5-48 48v128c0 26.5 21.5 48 48 48h80v64c0 35.3-28.7 64-64 64h-8c-13.3 0-24 10.7-24 24v48c0 13.3 10.7 24 24 24h8c88.4 0 160-71.6 160-160V80c0-26.5-21.5-48-48-48zm-288 0H48C21.5 32 0 53.5 0 80v128c0 26.5 21.5 48 48 48h80v64c0 35.3-28.7 64-64 64h-8c-13.3 0-24 10.7-24 24v48c0 13.3 10.7 24 24 24h8c88.4 0 160-71.6 160-160V80c0-26.5-21.5-48-48-48z"/></svg>');
+  width: 40px;
+  left: 104%;
+  margin-top: -20px;
+  z-index: 100;
+}
