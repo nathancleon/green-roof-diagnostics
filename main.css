@@ -96,7 +96,7 @@ header {
 
 .banner-text {
   font-family: 'Open Sans', sans-serif;
-  font-size: 20px;
+  font-size: 18px;
   color: #464143;
   width: 800px;
   margin-left: 320px;
@@ -193,10 +193,15 @@ header {
   color: #888;
 }
 
+.article-link {
+  text-decoration: none;
+  color: #fff;
+}
+
 .section {
   height: 700px;
   width: 100%;
-  border-bottom: 2px solid #ddd;
+  border-bottom: 1px solid #ddd;
 }
 
 .mission {
@@ -347,7 +352,7 @@ header {
 }
 
 .copy-open-quote {
-  margin-top: -50px;
+  margin-top: -20px;
 }
 
 /* .copy-open-quote::before {
@@ -449,7 +454,7 @@ header {
 }
 
 .bg-color {
-  background-color: #f8f8f8;
+  background-color: #fafafa;
 }
 
 .content-img {
@@ -498,6 +503,7 @@ header {
   border-radius: 5px;
   background-color: #fff;
   align-self: center;
+  box-shadow: rgba(27, 39, 51, 0.25) 0px 0px 10px 0px;
   z-index: 0;
 }
 
@@ -577,19 +583,29 @@ header {
 
 .btn {
   margin: 0 auto;
-  margin-top: 50px;
+  margin-top: 25px;
   height: 50px;
   width: 150px;
   background-color: rgb(221, 0, 0);
   border-radius: 5px;
   color: #fff;
   font-family: 'Open Sans';
-  font-size: 1rem;
+  font-size: 16px;
   cursor: pointer;
 }
 
 .btn:hover {
   background-color: rgb(255, 0, 0);
+}
+
+.click-right {
+  margin: 0 auto;
+  margin-top: 15px;
+  width: 20px;
+}
+
+#resources {
+  overflow-y: hidden;
 }
 
 .resources-title {
@@ -601,25 +617,29 @@ header {
 }
 
 .resource-cards {
+  width: 150%;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  flex-wrap: nowrap;
   margin-top: 80px;
+  overflow-x: scroll;
+  overflow-y: hidden;
 }
 
 .resource-card {
   margin-left: 0;
-  height: 480px;
-  width: 380px;
+  height: 420px;
+  width: 300px;
   border: 1px solid #ddd;
   border-radius: 5px;
-  padding: 50px;
+  padding: 30px;
 }
 
 .reference-title {
   margin: 0 auto;
   font-family: 'Open Sans';
-  font-size: 1.25rem;
+  font-size: 18px;
   text-decoration: none;
   color: #555;
 }
@@ -628,14 +648,15 @@ header {
   margin: 0 auto;
   margin-top: 10px;
   font-family: 'Open Sans';
-  font-size: 1rem;
+  font-size: 16px;
   color: #777;
 }
 
 .reference-content {
   margin-top: 15px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   font-family: 'Merriweather';
+  font-size: 14px;
   line-height: 35px;
   color: #656565;
 }

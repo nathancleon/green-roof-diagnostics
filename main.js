@@ -241,3 +241,38 @@ function showSlider(index){
     slider[index].style.display = "block";
     dots[index].classList.add('dot-active');
 }
+
+function peopleCards() {
+  let people = [
+    {
+      cardImg: 'anna-zakrisson.jpg',
+      name: 'Anna Zakrisson',
+      title: 'Soil Biologist',
+      bio: 'I am intrigued by the possibility of creating sustainable ecosystems within cities'
+    },
+    {
+      cardImg: 'oscar-wamerdam.jpg',
+      name: 'Oscar Wamerdam',
+      title: 'CEO',
+      bio: 'I am intrigued by the possibility of creating sustainable ecosystems within cities'
+    },
+    {
+      cardImg: 'brad-garner.jpg',
+      name: 'Brad Garner',
+      title: 'Software Engineer',
+      bio: 'I am intrigued by the possibility of creating sustainable ecosystems within cities'
+    },
+    {
+      cardImg: 'joshua-robinson.jpg',
+      name: 'Joshua Robinson',
+      title: 'Stormwater Engineer',
+      bio: 'I am intrigued by the possibility of creating sustainable ecosystems within cities'
+    },
+    {
+      cardImg: 'laura-supple.jpg',
+      name: 'Laura Supple',
+      title: 'Environmental Engineer',
+      bio: 'I am intrigued by the possibility of creating sustainable ecosystems within cities'
+    }
+  ];
+}
