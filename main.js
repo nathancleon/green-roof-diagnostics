@@ -115,17 +115,17 @@ function populateDivs() {
       </div>
       <div class="slider-container">
         <div class="img-slider">
-        <div class="slider fade" id="slider-1">
-          <img id="img-1" src="./g1.jpg"/>
+        <div class="slider fade">
+          <img" src="./g1.jpg"/>
         </div>
-        <div class="slider fade" id="slider-2">
-          <img id="img-2" src="./g2.jpg"/>
+        <div class="slider fade">
+          <img src="./g2.jpg"/>
         </div>
-        <div class="slider fade" id="slider-3">
-          <img id="img-3" src="./g3.jpg"/>
+        <div class="slider fade">
+          <img src="./g3.jpg"/>
         </div>
-        <div class="slider fade" id="slider-4">
-          <img id="img-4" src="./g4.jpg"/>
+        <div class="slider fade">
+          <img src="./g4.jpg"/>
         </div>
         <svg class="slide-left arrow" data-index="0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512"><path fill="#fff" d="M25.1 247.5l117.8-116c4.7-4.7 12.3-4.7 17 0l7.1 7.1c4.7 4.7 4.7 12.3 0 17L64.7 256l102.2 100.4c4.7 4.7 4.7 12.3 0 17l-7.1 7.1c-4.7 4.7-12.3 4.7-17 0L25 264.5c-4.6-4.7-4.6-12.3.1-17z"/></svg>
         <svg class="slide-right arrow" data-index="0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512"><path fill="#fff" d="M166.9 264.5l-117.8 116c-4.7 4.7-12.3 4.7-17 0l-7.1-7.1c-4.7-4.7-4.7-12.3 0-17L127.3 256 25.1 155.6c-4.7-4.7-4.7-12.3 0-17l7.1-7.1c4.7-4.7 12.3-4.7 17 0l117.8 116c4.6 4.7 4.6 12.3-.1 17z"/></svg>
@@ -175,35 +175,11 @@ function showRotationalContent() {
   });
 }
 
-// function imageSlider() {
-//   let index = 1;
-
-//   $('.slide-left').click(function(){
-//     let current = $(this).siblings('img.active');
-//     let prev = current.prev('img');
-//     if(prev.length != 0) {
-//       current.removeClass('active');
-//       prev.addClass('active');
-//       index--;
-//       console.log(index);
-//     }
-//   });
-
-//   $('.slide-right').click(function(){
-//     let current = $(this).siblings('img.active');
-//     let next = current.next('img');
-//     if(next.length != 0) {
-//       current.removeClass('active');
-//       next.addClass('active');
-//       index++;
-//       console.log(index);
-//     }
-//   });
-// }
 function imageSlider() {
   let sliderIndex = 0;
   let slideLeft = $('.slide-left');
   let slideRight = $('.slide-right');
+
 
   slideLeft.click(function(event){
     let index = $(this).data('index');
@@ -227,31 +203,15 @@ function imageSlider() {
     $(this).parent().children('.arrow').data('index', index + 1);
   });
 
-  // for(let i = 0; i < slideLeft.length; i++) {
-  //   $().addEventListener('click',function(event){
-  //     showSlider(--sliderIndex, event);
-  //     if(sliderIndex < 0) {
-  //       sliderIndex = 0;
-  //     }
-  //   });
-  // }
-
-  // for(let i = 0; i < slideRight.length; i++) {
-  //   slideRight[i].addEventListener('click',function(event){
-  //     showSlider(++sliderIndex, event);
-  //     if(sliderIndex >= 3) {
-  //       sliderIndex = 3;
-  //     } 
-  //   });
-  // }
-
-  document.querySelectorAll('.dot').forEach(function(element){
-    element.addEventListener('click',function(){
-        var dots = Array.prototype.slice.call(this.parentElement.children);
-        var dotIndex = dots.indexOf(element);
-        showSlider(sliderIndex = dotIndex);
+    $('.dot').click(function() {
+      let dotIndex = $(this).index();
+      console.log(dotIndex);
+      let imgSlider = $(this).parent().parent().children('.img-slider').children('.slider');
+      let dotSlider = $(this).parent().children();
+      console.log(dotSlider);
+      $(this).addClass('dot-active').siblings().removeClass('dot-active');
+      showSlider(sliderIndex = dotIndex, imgSlider, dotSlider);
     });
-  });
 }
 
 function showSlider(index, slider, dots){
