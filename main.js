@@ -6,6 +6,7 @@ $( document ).ready(function() {
   stickyNav();
   showRotationalContent();
   imageSlider();
+  peopleCardsData();
 });
 
 function populateDivs() {
@@ -116,7 +117,7 @@ function populateDivs() {
       <div class="slider-container">
         <div class="img-slider">
         <div class="slider fade">
-          <img" src="./g1.jpg"/>
+          <img src="./g1.jpg"/>
         </div>
         <div class="slider fade">
           <img src="./g2.jpg"/>
@@ -180,13 +181,12 @@ function imageSlider() {
   let slideLeft = $('.slide-left');
   let slideRight = $('.slide-right');
 
-
   slideLeft.click(function(event){
     let index = $(this).data('index');
     let imgSlider = $(this).parent().children('.slider');
     let dotSlider = $(this).parent().next('.slider-dots').children();
     showSlider(--sliderIndex, imgSlider, dotSlider);
-    if(sliderIndex < 0) {
+    if(sliderIndex <= 0) {
       sliderIndex = 0;
     }
     $(this).parent().children('.arrow').data('index', index - 1);
@@ -219,7 +219,7 @@ function showSlider(index, slider, dots){
       slider[i].style.display = "none";
       dots[i].classList.remove('dot-active');
     } 
-    if(index < 0) {
+    if(index <= 0) {
       index = 0;
     }
     if(index >= slider.length - 1) {
@@ -229,37 +229,64 @@ function showSlider(index, slider, dots){
     dots[index].classList.add('dot-active');
 }
 
-function peopleCards() {
+function peopleCardsData() {
   let people = [
     {
       cardImg: 'anna-zakrisson.jpg',
       name: 'Anna Zakrisson',
       title: 'Soil Biologist',
-      bio: 'I am intrigued by the possibility of creating sustainable ecosystems within cities'
+      bio: 'I am intrigued by the possibility of creating sustainable ecosystems within cities',
+      fullBio: 'I am intrigued by the possibility of creating sustainable ecosystems within cities'
     },
     {
-      cardImg: 'oscar-wamerdam.jpg',
-      name: 'Oscar Wamerdam',
+      cardImg: 'oscar-warmerdam.jpeg',
+      name: 'Oscar Warmerdam',
       title: 'CEO',
-      bio: 'I am intrigued by the possibility of creating sustainable ecosystems within cities'
+      bio: 'I am intrigued by the possibility of creating sustainable ecosystems within cities',
+      fullBio: 'I am intrigued by the possibility of creating sustainable ecosystems within cities'
     },
     {
       cardImg: 'brad-garner.jpg',
       name: 'Brad Garner',
       title: 'Software Engineer',
-      bio: 'I am intrigued by the possibility of creating sustainable ecosystems within cities'
+      bio: 'I am intrigued by the possibility of creating sustainable ecosystems within cities',
+      fullBio: 'I am intrigued by the possibility of creating sustainable ecosystems within cities'
     },
     {
-      cardImg: 'joshua-robinson.jpg',
+      cardImg: 'joshua-robinson.jpeg',
       name: 'Joshua Robinson',
       title: 'Stormwater Engineer',
-      bio: 'I am intrigued by the possibility of creating sustainable ecosystems within cities'
+      bio: 'I am intrigued by the possibility of creating sustainable ecosystems within cities',
+      fullBio: 'I am intrigued by the possibility of creating sustainable ecosystems within cities'
     },
     {
-      cardImg: 'laura-supple.jpg',
+      cardImg: 'laura-supple.jpeg',
       name: 'Laura Supple',
       title: 'Environmental Engineer',
-      bio: 'I am intrigued by the possibility of creating sustainable ecosystems within cities'
+      bio: 'I am intrigued by the possibility of creating sustainable ecosystems within cities',
+      fullBio: 'I am intrigued by the possibility of creating sustainable ecosystems within cities'
     }
   ];
+
+  peopleCards(people);
+}
+
+function peopleCards(people) {
+
+  for(let i = 0; i < people.length; i++) {
+    $('.card-left').children('.card-img').attr('src', `${people[i - 1].cardImg}`);
+    $('.card-left').children('.card-name').html(`${people[i - 1].name}`);
+    $('.card-left').children('.card-title').html(`${people[i - 1].title}`);
+    $('.card-left').children('.card-content').html(`${people[i - 1].bio}`);
+
+    $('.people-cards').children('.card-img').attr('src', `${people[i].cardImg}`);
+    $('.people-cards').children('.card-name').html(`${people[i].name}`);
+    $('.people-cards').children('.card-title').html(`${people[i].title}`);
+    $('.people-cards').children('.card-content').html(`${people[i].bio}`);
+
+    $('.card-right').children('.card-img').attr('src', `${people[i + 1].cardImg}`);
+    $('.card-right').children('.card-name').html(`${people[i + 1].name}`);
+    $('.card-right').children('.card-title').html(`${people[i + 1].title}`);
+    $('.card-right').children('.card-content').html(`${people[i + 1].bio}`);
+  }
 }
