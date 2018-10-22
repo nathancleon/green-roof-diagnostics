@@ -885,7 +885,7 @@ header {
 
 @media only screen and (max-width: 1160px) {
   .section {
-    height: 1100px;
+    height: 1200px;
     flex-direction: column;
   }
 
@@ -1174,7 +1174,7 @@ header {
   }
 
   .copy-emphasis {
-    font-size: 18px;
+    font-size: 16px;
     color: #8bad33;
   }
 
@@ -1209,4 +1209,102 @@ header {
 
 }
 
-@media only screen and (max-width: 510px) {}
+@media only screen and (max-width: 630px) {
+  .footer {
+    flex-direction: column;
+  }
+  
+  .footer-content1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -15px;
+  }
+  
+  .footer-content2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+  }
+}
+
+@media only screen and (max-width: 510px) {
+  .nav-links {
+    width: 80%;
+  }
+
+  .mission-copy_header {
+    width: 300px;
+    position: relative;
+    font-family: 'Open Sans';
+    font-size: 26px;
+  }
+  
+  .mission-copy_header:after {
+    content: '';
+    position: absolute;
+    width: 260px;
+    height: 7px;
+    top: 35px;
+    left: 3px;
+    background-color: #c12b5b;
+  }
+
+.resources-section {
+  height: 450px;
+}
+
+.resources-title {
+  font-size: 20px;
+  margin-left: 20px;
+}
+
+.resource-cards {
+  min-width: 100%;
+  min-height: 330px;
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+}
+
+.resource-card {
+  height: 320px;
+  min-width: 250px;
+}
+
+.reference-title {
+  font-size: 12px;
+}
+
+.reference-src {
+  font-size: 12px;
+}
+
+.reference-content {
+  font-size: 10px;
+  line-height: 20px;
+  margin-bottom: 30px;
+}
+
+.reference-link {
+  font-size: 12px;
+  padding-top: 6px;
+  height: 30px;
+  width: 100px;
+  border-radius: 2px;
+}
+
+.reference-link:visited {
+  color: #fff;
+}
+
+.reference-link:hover {
+  border: 1px solid #ddd;
+  background-color: #fff;
+  color: #888;
+}
+
+}
