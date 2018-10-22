@@ -114,7 +114,7 @@ function populateDivs() {
           </div>
         </div>
       </div>
-      <div class="slider-container">
+      <div class="slider-container ${reverseImage}">
         <div class="img-slider">
         <div class="slider fade">
           <img src="./g1.jpg"/>
