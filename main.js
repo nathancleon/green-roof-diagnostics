@@ -244,7 +244,7 @@ function peopleCardsData() {
       cardImg: 'oscar-warmerdam.jpeg',
       name: 'Oscar Warmerdam',
       title: 'CEO',
-      bio: 'Something else',
+      bio: 'I am intrigued by the possibility of creating sustainable ecosystems within cities',
       fullBio: 'I am intrigued by the possibility of creating sustainable ecosystems within cities'
     },
     {
