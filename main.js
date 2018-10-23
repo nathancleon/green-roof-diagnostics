@@ -184,11 +184,11 @@ function imageSlider() {
     let index = $(this).data('index');
     let imgSlider = $(this).parent().children('.slider');
     let dotSlider = $(this).parent().next('.slider-dots').children();
-    showSlider(index - 1, imgSlider, dotSlider);
     if (index <= 0) {
       index = 0;
       return;
     }
+    showSlider(index - 1, imgSlider, dotSlider);
     $(this).parent().children('.arrow').data('index', index - 1);
   });
 
@@ -196,20 +196,18 @@ function imageSlider() {
     let index = $(this).data('index');
     let imgSlider = $(this).parent().children('.slider');
     let dotSlider = $(this).parent().next('.slider-dots').children();
-    showSlider(index + 1, imgSlider, dotSlider);
     if (index >= imgSlider.length - 1) {
       index = imgSlider.length - 1;
       return;
     }
+    showSlider(index + 1, imgSlider, dotSlider);
     $(this).parent().children('.arrow').data('index', index + 1);
   });
 
   $('.dot').click(function () {
     let dotIndex = $(this).index();
-    console.log(dotIndex);
     let imgSlider = $(this).parent().parent().children('.img-slider').children('.slider');
     let dotSlider = $(this).parent().children();
-    console.log(dotSlider);
     showSlider(dotIndex, imgSlider, dotSlider);
   });
 }
@@ -219,19 +217,13 @@ function showSlider(index, slider, dots) {
     slider[i].style.display = "none";
     dots[i].classList.remove('dot-active');
   }
-  if (index <= 0) {
-    index = 0;
-  }
-  if (index >= slider.length - 1) {
-    index = slider.length - 1;
-  }
-  console.log(index);
   slider[index].style.display = "block";
   dots[index].classList.add('dot-active');
 }
 
 function peopleCardsData() {
-  let index = 0;
+  let index = 1;
+  let n = 0;
   let people = [
     {
       cardImg: 'anna-zakrisson.jpg',
@@ -271,20 +263,20 @@ function peopleCardsData() {
   ];
 
   peopleCards(index, people);
+  
+  //TODO: currently cannot loop through all bios in array, need to fix
 
-  $('.click-left').click(function(e) {
+  $('.click-left').click(function(direction) {
     if(index <= 0) {
       index = 0;
-      return;
     }
     index = index - 1;
     peopleCards(index, people);
   });
 
   $('.click-right').click(function(e) {
-    if (index >= people.length - 3) {
+    if(index >= people.length - 3) {
       index = people.length - 3;
-      return;
     }
     index = index + 1;
     peopleCards(index, people);
@@ -294,8 +286,7 @@ function peopleCardsData() {
 
 
 function peopleCards(index, people) {
-  
-
+  console.log(index);
   $('.card-left').children('.card-img').attr('src', `${people[index].cardImg}`);
   $('.card-left').children('.card-name').html(`${people[index].name}`);
   $('.card-left').children('.card-title').html(`${people[index].title}`);
@@ -310,4 +301,5 @@ function peopleCards(index, people) {
   $('.card-right').children('.card-name').html(`${people[index + 2].name}`);
   $('.card-right').children('.card-title').html(`${people[index + 2].title}`);
   $('.card-right').children('.card-content').html(`${people[index + 2].bio}`);
+
 }
