@@ -19,8 +19,8 @@ function populateDivs() {
       title: 'We start at the top',
       author: 'Charlie Miller, Advisor',
       name: 'Charlie',
-      headshot: 'charlie-miller.jpg',
-      image: 'g1.jpg',
+      headshot: './assets/people/charlie-miller.jpg',
+      image: './assets/images/g1.jpg',
       quotes: [
         `Green infrastructure focuses on cost-effective, living, ${em}upstream${_em} solutions. And there is no-where farther up stream than the roof!`,
         `${em}<a href='http://bradgarner.com' target='_blank'>Green infrastructure</a>${_em} is so powerful, because it harnesses the power of nature to provide primary and ${em}secondary benefits${_em}`,
@@ -31,8 +31,8 @@ function populateDivs() {
       title: 'We lead',
       author: 'Joshua Robinson, Hydrologic Engineer',
       name: 'Joshua',
-      headshot: 'joshua-robinson.jpeg',
-      image: 'i1.png',
+      headshot: './assets/people/joshua-robinson.jpeg',
+      image: './assets/images/i1.png',
       quotes: [
         `Green Roof Diagnostics was founded to provide scientific and technical leadership within the green roof industry. Our success is when ${em}all sails rise${_em}.`,
         `${em}Testing${_em} is critical to our work. We test products and concepts from anyone. We try to handle this work in a rigorous, ${em}data-driven${_em} manner for optimal benefit to all parties.`,
@@ -43,8 +43,8 @@ function populateDivs() {
       title: 'We verify',
       author: 'Laura Supple, Environmental Engineer',
       name: 'Laura',
-      headshot: 'laura-supple.jpeg',
-      image: 'i2.jpg',
+      headshot: './assets/people/laura-supple.jpeg',
+      image: './assets/images/i2.jpg',
       quotes: [
         `We measure, quantify, and ${em}validate${_em} the effectiveness of green infrastructure. We think the industry benefits from this ${em}de-mystification${_em}.`,
         `We help design teams can utilize green roofs ${em}confidently${_em}, with ${em}ROI${_em} for the developer and the environment.`,
@@ -55,8 +55,8 @@ function populateDivs() {
       title: 'We take on challenges',
       author: 'Brad Garner, Software Engineer',
       name: 'Brad',
-      headshot: 'brad-garner.jpg',
-      image: 'v5.png',
+      headshot: './assets/people/brad-garner.jpg',
+      image: './assets/images/v5.png',
       quotes: [
         `Responding and adapting to our climate requires ${em}innovation${_em}, and the best ideas may come from anywhere!`,
         `We help ${em}manufacturers and inventors${_em} evaluate their ${em}sustainable solutions${_em}, through rigorous testing and monitoring.`,
@@ -67,8 +67,8 @@ function populateDivs() {
       title: 'Our work is alive!',
       author: 'Anna Zakrisson, Soil Biologist',
       name: 'Anna',
-      headshot: 'anna-zakrisson.jpg',
-      image: 'l1.jpg',
+      headshot: './assets/people/anna-zakrisson.jpg',
+      image: './assets/images/l1.jpg',
       quotes: [
         `Green infrastructure is ${em}alive!${_em}  Our work is holistic, including ${em}soil biology${_em} and ${em}water quality${_em}.`,
         `Though synergistic benefits are well understood within larger ecosystems, such as forests and meadows, the biology and chemistry of smaller, more ${em}urban ecosystems${_em} possesses mysteries we aim to unlock and harness for good.`,
@@ -118,16 +118,16 @@ function populateDivs() {
       <div class="slider-container ${reverseImage}">
         <div class="img-slider">
         <div class="slider fade">
-          <img src="./g1.jpg"/>
+          <img src="./assets/images/g1.jpg"/>
         </div>
         <div class="slider fade" style="display: none;">
-          <img src="./g2.jpg"/>
+          <img src="./assets/images/g2.jpg"/>
         </div>
         <div class="slider fade" style="display: none;">
-          <img src="./g3.jpg"/>
+          <img src="./assets/images/g3.jpg"/>
         </div>
         <div class="slider fade" style="display: none;">
-          <img src="./g4.jpg"/>
+          <img src="./assets/images/g4.jpg"/>
         </div>
         <svg class="slide-left arrow" data-index="0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512"><path fill="#fff" d="M25.1 247.5l117.8-116c4.7-4.7 12.3-4.7 17 0l7.1 7.1c4.7 4.7 4.7 12.3 0 17L64.7 256l102.2 100.4c4.7 4.7 4.7 12.3 0 17l-7.1 7.1c-4.7 4.7-12.3 4.7-17 0L25 264.5c-4.6-4.7-4.6-12.3.1-17z"/></svg>
         <svg class="slide-right arrow" data-index="0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512"><path fill="#fff" d="M166.9 264.5l-117.8 116c-4.7 4.7-12.3 4.7-17 0l-7.1-7.1c-4.7-4.7-4.7-12.3 0-17L127.3 256 25.1 155.6c-4.7-4.7-4.7-12.3 0-17l7.1-7.1c4.7-4.7 12.3-4.7 17 0l117.8 116c4.6 4.7 4.6 12.3-.1 17z"/></svg>
@@ -232,35 +232,35 @@ function peopleCardsData() {
 
   people = [
     {
-      cardImg: 'anna-zakrisson.jpg',
+      cardImg: './assets/people/anna-zakrisson.jpg',
       name: 'Anna Zakrisson',
       title: 'Soil Biologist',
       bio: 'I am intrigued by the possibility of creating sustainable ecosystems within cities',
       fullBio: 'I am intrigued by the possibility of creating sustainable ecosystems within cities'
     },
     {
-      cardImg: 'oscar-warmerdam.jpeg',
+      cardImg: './assets/people/oscar-warmerdam.jpeg',
       name: 'Oscar Warmerdam',
       title: 'CEO',
       bio: 'I am intrigued by the possibility of creating sustainable ecosystems within cities',
       fullBio: 'I am intrigued by the possibility of creating sustainable ecosystems within cities'
     },
     {
-      cardImg: 'brad-garner.jpg',
+      cardImg: './assets/people/brad-garner.jpg',
       name: 'Brad Garner',
       title: 'Software Engineer',
       bio: 'I am intrigued by the possibility of creating sustainable ecosystems within cities',
       fullBio: 'I am intrigued by the possibility of creating sustainable ecosystems within cities'
     },
     {
-      cardImg: 'joshua-robinson.jpeg',
+      cardImg: './assets/people/joshua-robinson.jpeg',
       name: 'Joshua Robinson',
       title: 'Stormwater Engineer',
       bio: 'I am intrigued by the possibility of creating sustainable ecosystems within cities',
       fullBio: 'I am intrigued by the possibility of creating sustainable ecosystems within cities'
     },
     {
-      cardImg: 'laura-supple.jpeg',
+      cardImg: './assets/people/laura-supple.jpeg',
       name: 'Laura Supple',
       title: 'Environmental Engineer',
       bio: 'I am intrigued by the possibility of creating sustainable ecosystems within cities',
