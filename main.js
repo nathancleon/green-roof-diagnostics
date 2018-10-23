@@ -1,5 +1,6 @@
 'use strict';
 /* global $ */
+let people;
 
 $(document).ready(function () {
   populateDivs();
@@ -7,6 +8,7 @@ $(document).ready(function () {
   showRotationalContent();
   imageSlider();
   peopleCardsData();
+  peopleModal();
 });
 
 function populateDivs() {
@@ -222,9 +224,13 @@ function showSlider(index, slider, dots) {
 }
 
 function peopleCardsData() {
-  let index = 1;
-  let n = 0;
-  let people = [
+  let index = {
+    left: 0,
+    mid: 1,
+    right: 2
+  }
+
+  people = [
     {
       cardImg: 'anna-zakrisson.jpg',
       name: 'Anna Zakrisson',
@@ -263,43 +269,61 @@ function peopleCardsData() {
   ];
 
   peopleCards(index, people);
-  
-  //TODO: currently cannot loop through all bios in array, need to fix
 
-  $('.click-left').click(function(direction) {
-    if(index <= 0) {
-      index = 0;
-    }
-    index = index - 1;
+  $('.click-left').click(function() {
+    index.left = decrementPeopleIndex(index.left, people.length);
+    index.mid = decrementPeopleIndex(index.mid, people.length);
+    index.right = decrementPeopleIndex(index.right, people.length);
     peopleCards(index, people);
   });
 
-  $('.click-right').click(function(e) {
-    if(index >= people.length - 3) {
-      index = people.length - 3;
-    }
-    index = index + 1;
+  $('.click-right').click(function() {
+    index.left = incrementPeopleIndex(index.left, people.length);
+    index.mid = incrementPeopleIndex(index.mid, people.length);
+    index.right = incrementPeopleIndex(index.right, people.length);
     peopleCards(index, people);
   });
 }
 
+function decrementPeopleIndex(index, length) {
+  if(index - 1 < 0) {
+    return length - Math.abs(index - 1);
+  } else {
+    return index - 1;
+  }
+}
+
+function incrementPeopleIndex(index, length) {
+  if(index + 1 > length - 1) {
+    return (index + 1) - (length);
+  } else {
+    return index + 1;
+  }
+}
+
+function peopleModal() {
+  $('.btn-mid').click(function() {
+    let data = $('.btn-mid').data('index');
+  });
+}
 
 
 function peopleCards(index, people) {
-  console.log(index);
-  $('.card-left').children('.card-img').attr('src', `${people[index].cardImg}`);
-  $('.card-left').children('.card-name').html(`${people[index].name}`);
-  $('.card-left').children('.card-title').html(`${people[index].title}`);
-  $('.card-left').children('.card-content').html(`${people[index].bio}`);
+  $('.card-left').children('.card-img').attr('src', `${people[index.left].cardImg}`);
+  $('.card-left').children('.card-name').html(`${people[index.left].name}`);
+  $('.card-left').children('.card-title').html(`${people[index.left].title}`);
+  $('.card-left').children('.card-content').html(`${people[index.left].bio}`);
 
-  $('.people-cards').children('.card-img').attr('src', `${people[index + 1].cardImg}`);
-  $('.people-cards').children('.card-name').html(`${people[index + 1].name}`);
-  $('.people-cards').children('.card-title').html(`${people[index + 1].title}`);
-  $('.people-cards').children('.card-content').html(`${people[index + 1].bio}`);
+  $('.people-cards').children('.card-img').attr('src', `${people[index.mid].cardImg}`);
+  $('.people-cards').children('.card-name').html(`${people[index.mid].name}`);
+  $('.people-cards').children('.card-title').html(`${people[index.mid].title}`);
+  $('.people-cards').children('.card-content').html(`${people[index.mid].bio}`);
 
-  $('.card-right').children('.card-img').attr('src', `${people[index + 2].cardImg}`);
-  $('.card-right').children('.card-name').html(`${people[index + 2].name}`);
-  $('.card-right').children('.card-title').html(`${people[index + 2].title}`);
-  $('.card-right').children('.card-content').html(`${people[index + 2].bio}`);
+  $('.btn-mid').data('index', index.mid);
+
+  $('.card-right').children('.card-img').attr('src', `${people[index.right].cardImg}`);
+  $('.card-right').children('.card-name').html(`${people[index.right].name}`);
+  $('.card-right').children('.card-title').html(`${people[index.right].title}`);
+  $('.card-right').children('.card-content').html(`${people[index.right].bio}`);
 
 }
