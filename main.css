@@ -522,10 +522,6 @@ header {
   display: flex;
 }
 
-.center {
-  margin-top: 400px;
-}
-
 .people-cards {
   margin: 0 auto;
   display: flex;
@@ -924,8 +920,9 @@ form::-webkit-scrollbar {
   }
 
   .center {
-    margin-top: 10px;
     width: 80%;
+    margin-top: 10px;
+    margin-bottom: 100px;
   }
 
   .people-cards {
