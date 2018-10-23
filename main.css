@@ -80,6 +80,11 @@ header {
   color: #999;
 }
 
+.nav-up-icon {
+  width: 15px;
+  margin-top: -3px;
+}
+
 /****************************************** 
   Banner
 ******************************************/
@@ -236,6 +241,8 @@ header {
 .mission-copy {
   flex-direction: column;
   position: relative;
+  margin-top: 50px;
+  margin-bottom: 80px;
   width: 40%;
 }
 
@@ -366,7 +373,7 @@ header {
   font-size: 14px;
   font-family: 'Merriweather';
   text-align: justify;
-  line-height: 20px;
+  line-height: 30px;
   color: #444;
   /* margin: 0 auto; */
 }
@@ -524,6 +531,8 @@ header {
 
 .people-cards {
   margin: 0 auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
   display: flex;
   flex-direction: column;
   height: 550px;
@@ -700,6 +709,7 @@ header {
   min-height: 400px;
   display: flex;
   flex-direction: row;
+  margin-bottom: 50px;
   overflow-x: auto;
 }
 
@@ -1048,9 +1058,6 @@ form::-webkit-scrollbar {
     height: 1200px;
   }
 
-  .mission {
-    height: 1200px;
-  }
 
   .mission-copy_header {
     position: relative;
