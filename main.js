@@ -232,39 +232,39 @@ function peopleCardsData() {
 
   people = [
     {
-      cardImg: './assets/people/anna-zakrisson.jpg',
-      name: 'Anna Zakrisson',
-      title: 'Soil Biologist',
-      bio: 'I am intrigued by the possibility of creating sustainable ecosystems within cities',
-      fullBio: 'I am intrigued by the possibility of creating sustainable ecosystems within cities'
+      cardImg: "./assets/people/anna-zakrisson.jpg",
+      name: "Anna Zakrisson",
+      title: "Soil Biologist",
+      bio: "I am intrigued by the possibility of creating sustainable ecosystems within cities. I am excited to work together with the highly qualified experts at GRD to create cutting-edge research that will have positive, direct and profound impacts on our future lives.",
+      fullBio: "I am intrigued by the possibility of creating sustainable ecosystems within cities"
     },
     {
-      cardImg: './assets/people/oscar-warmerdam.jpeg',
-      name: 'Oscar Warmerdam',
-      title: 'CEO',
-      bio: 'I am intrigued by the possibility of creating sustainable ecosystems within cities',
-      fullBio: 'I am intrigued by the possibility of creating sustainable ecosystems within cities'
+      cardImg: "./assets/people/oscar-warmerdam.jpeg",
+      name: "Oscar Warmerdam",
+      title: "CEO",
+      bio: "I am intrigued by the possibility of creating sustainable ecosystems within cities",
+      fullBio: "I am intrigued by the possibility of creating sustainable ecosystems within cities"
     },
     {
-      cardImg: './assets/people/brad-garner.jpg',
-      name: 'Brad Garner',
-      title: 'Software Engineer',
-      bio: 'I am intrigued by the possibility of creating sustainable ecosystems within cities',
-      fullBio: 'I am intrigued by the possibility of creating sustainable ecosystems within cities'
+      cardImg: "./assets/people/brad-garner.jpg",
+      name: "Brad Garner",
+      title: "Software Engineer",
+      bio: "I enjoy data, and I'm passionate about the environment. I also like working on a team with high standards. This is why I'm so happy to be at GRD.",
+      fullBio: "I am intrigued by the possibility of creating sustainable ecosystems within cities"
     },
     {
-      cardImg: './assets/people/joshua-robinson.jpeg',
-      name: 'Joshua Robinson',
-      title: 'Stormwater Engineer',
-      bio: 'I am intrigued by the possibility of creating sustainable ecosystems within cities',
-      fullBio: 'I am intrigued by the possibility of creating sustainable ecosystems within cities'
+      cardImg: "./assets/people/joshua-robinson.jpeg",
+      name: "Joshua Robinson",
+      title: "Stormwater Engineer",
+      bio: "Growing up along a tidal creek in coastal South Carolina, I have always been inspired and humbled by the order and complexity of the natural world.",
+      fullBio: "I am intrigued by the possibility of creating sustainable ecosystems within cities"
     },
     {
-      cardImg: './assets/people/laura-supple.jpeg',
-      name: 'Laura Supple',
-      title: 'Environmental Engineer',
-      bio: 'I am intrigued by the possibility of creating sustainable ecosystems within cities',
-      fullBio: 'I am intrigued by the possibility of creating sustainable ecosystems within cities'
+      cardImg: "./assets/people/laura-supple.jpeg",
+      name: "Laura Supple",
+      title: "Environmental Engineer",
+      bio: "I am fascinated by the complex interactions between humans, nature, and the built environment. My passion for sustainable development has led me to volunteer on organic farms in Europe, the Americas, and New Zealand.",
+      fullBio: "I am intrigued by the possibility of creating sustainable ecosystems within cities"
     }
   ];
 
