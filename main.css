@@ -120,18 +120,17 @@ header {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: 350px;
   width: 100%;
   border-bottom: 2px solid #ddd;
   visibility: hidden;
 }
 
 .new-content {
+  margin-top: 100px;
+  margin-bottom: 100px;
   position: relative;
   display: flex;
-  min-height: 200px;
-  max-height: 200px;
-  width: 700px;
+  width: 90%;
   border: 1px solid #ddd;
   border-radius: 2px;
   background-color: #fff;
@@ -163,8 +162,7 @@ header {
 }
 
 .new-content_thumbnail {
-  height: 200px;
-  width: 250px;
+  width: 30%;
   overflow: hidden;
   margin-right: 50px;
 }
@@ -177,9 +175,8 @@ header {
 .new-content_text {
   display: flex;
   flex-direction: column;
-  width: 400px;
-  height: 200px;
-  padding: 20px;
+  width: 60%;
+  padding: 5px;
   border-radius: 2px;
   margin: 0 auto;
   padding-top: 20px;
@@ -191,10 +188,11 @@ header {
   font-family: 'Merriweather', serif;
 }
 
-.article-btn {
+.btn-article {
   align-self: center;
   margin-top: 10px;
   margin-left: -20px;
+  margin-bottom: 20px;
   padding-top: 3px;
   text-align: center;
   text-decoration: none;
@@ -208,7 +206,7 @@ header {
   cursor: pointer;
 }
 
-.article-btn:hover {
+.btn-article:hover {
   border: 1px solid #ddd;
   background-color: #fff;
   color: #888;
@@ -315,6 +313,10 @@ header {
 .mission-title {
   font-size: 24px;
   text-align: center;
+}
+
+.mission-list {
+  margin-left: -2%;
 }
 
 .mission-list-text {
@@ -553,8 +555,7 @@ header {
   margin-bottom: 100px;
   display: flex;
   flex-direction: column;
-  height: 550px;
-  width: 350px;
+  width: 400px;
   padding: 10px;
   padding-top: 40px;
   border: 1px solid #ddd;
@@ -687,6 +688,8 @@ header {
 
 .side-content {
   width: 70%;
+  height: 40%;
+  overflow-y: scroll;
   font-size: 10px;
   margin-top: 5px;
   line-height: 20px;
@@ -816,30 +819,30 @@ form::-webkit-scrollbar {
   color: #656565;
 }
 
-.reference-link {
+.btn-reference {
   display: block;
   margin: 0 auto;
-  padding-top: 8px;
-  text-align: center;
-  text-decoration: none;
   height: 40px;
   width: 115px;
   background-color: #888;
-  border-radius: 5px;
   color: #fff;
-  font-family: 'Open Sans';
+  border-radius: 5px;
   cursor: pointer;
 }
 
-.reference-link:visited {
-  color: #fff;
-}
-
-.reference-link:hover {
+.btn-reference:hover {
   border: 1px solid #ddd;
   background-color: #fff;
   color: #888;
 }
+
+.reference-link {
+  text-decoration: none;
+  color: #fff;
+  font-family: 'Open Sans';
+}
+
+
 
 /****************************************** 
   Footer
@@ -1027,8 +1030,7 @@ form::-webkit-scrollbar {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    height: 400px;
-    width: 250px;
+    width: 280px;
     padding: 10px;
     padding-top: 20px;
     border: 1px solid #ddd;
@@ -1095,10 +1097,10 @@ form::-webkit-scrollbar {
     margin-top: 5px;
     width: 90%;
     font-family: 'Open Sans';
-    font-size: 10px;
+    font-size: 12px;
     color: #777;
     text-align: left;
-    line-height: 15px;
+    line-height: 20px;
   }
 
   .side-img {
@@ -1187,60 +1189,6 @@ form::-webkit-scrollbar {
 
   .nav-links {
     width: 70%;
-  }
-
-  .new-content {
-    min-height: 120px;
-    max-height: 120px;
-    width: 400px;
-  }
-
-  .new-content_thumbnail {
-    height: 120px;
-    width: 200px;
-    margin-right: 5px;
-  }
-
-  .new-content_text {
-    width: 400px;
-    height: 200px;
-    padding: 10px;
-  }
-
-  .article-text {
-    font-size: 10px;
-    align-self: center;
-    font-family: 'Merriweather', serif;
-    padding: 0px;
-    padding-bottom: 20px;
-  }
-
-  .article-btn {
-    align-self: center;
-    margin-top: -15px;
-    margin-left: -5px;
-    padding-top: 2px;
-    text-align: center;
-    text-decoration: none;
-    height: 20px;
-    width: 80px;
-    background-color: #888;
-    border-radius: 2px;
-    color: #fff;
-    font-size: 10px;
-    font-family: 'Open Sans';
-    cursor: pointer;
-  }
-
-  .article-btn:hover {
-    border: 1px solid #ddd;
-    background-color: #fff;
-    color: #888;
-  }
-
-  .article-link {
-    text-decoration: none;
-    color: #fff;
   }
 
   .content-copy {
@@ -1401,6 +1349,25 @@ form::-webkit-scrollbar {
     width: 80%;
   }
 
+  .new-content {
+    flex-direction: column;
+  }
+
+  .new-content_thumbnail {
+    height: 30vh;
+    width: 100%;
+  }
+
+  .content_img {
+    width: 100%;
+  }
+
+  .new-content_text {
+    height: 40vh;
+    width: 80%;
+    padding-top: 40px;
+  }
+
   .order2 {
   }
 
@@ -1446,60 +1413,6 @@ form::-webkit-scrollbar {
 
   .nav-link-style {
     font-size: 14px;
-  }
-
-  .new-content {
-    min-height: 150px;
-    max-height: 150px;
-    width: 100%;
-  }
-
-  .new-content_thumbnail {
-    height: 150px;
-    width: 220px;
-    margin-right: 5px;
-  }
-
-  .new-content_text {
-    width: 400px;
-    height: 200px;
-    padding: 20px;
-  }
-
-  .article-text {
-    font-size: 10px;
-    align-self: center;
-    font-family: 'Merriweather', serif;
-    padding: 0px;
-    padding-bottom: 20px;
-  }
-
-  .article-btn {
-    align-self: center;
-    margin-top: -15px;
-    margin-left: -5px;
-    padding-top: 2px;
-    text-align: center;
-    text-decoration: none;
-    height: 20px;
-    width: 80px;
-    background-color: #888;
-    border-radius: 2px;
-    color: #fff;
-    font-size: 10px;
-    font-family: 'Open Sans';
-    cursor: pointer;
-  }
-
-  .article-btn:hover {
-    border: 1px solid #ddd;
-    background-color: #fff;
-    color: #888;
-  }
-
-  .article-link {
-    text-decoration: none;
-    color: #fff;
   }
 
   .mission-copy_header {
