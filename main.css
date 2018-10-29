@@ -1,6 +1,5 @@
 * {
   box-sizing: border-box;
-  z-index: 1;
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -304,6 +303,26 @@ header {
   color: #888;
 }
 
+.mission-modal {
+  display: none;
+  max-height: 80vh;
+}
+
+.mission-modal-content {
+  overflow-y: scroll;
+}
+
+.mission-title {
+  font-size: 24px;
+  text-align: center;
+}
+
+.mission-list-text {
+  font-size: 16px;
+  color: #444;
+  margin-bottom: 10px;
+}
+
 .section_content {
   display: flex;
   justify-content: space-around;
@@ -392,6 +411,50 @@ header {
 
 .copy-open-quote {
   margin-top: -20px;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1900;
+}
+
+.read-more-modal {
+  display: none;
+}
+
+.read-more-modal-content {
+  position: relative;
+  overflow-y: scroll;
+}
+
+.modal-close {
+  position: absolute;
+  width: 20px;
+  top: 10px;
+  right: 15px;
+  padding: 2px;
+  cursor: pointer;
+}
+
+.js-modal-active {
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  position: fixed;
+  padding: 40px;
+  top: 50%;
+  left: 50%;
+  margin-left: auto;
+  background-color: #fafafa;
+  border-radius: 5px;
+  z-index: 2000;
+  transform: translate(-50%, -50%);
 }
 
 /* .copy-open-quote::before {
@@ -990,7 +1053,7 @@ form::-webkit-scrollbar {
   }
 
   .card-name {
-    font-size: 18px;
+    font-size: 16px;
     font-family: 'Open Sans';
     text-align: center;
     color: #555;
@@ -998,7 +1061,7 @@ form::-webkit-scrollbar {
 
   .card-title {
     margin-top: -5px;
-    font-size: 14px;
+    font-size: 12px;
     font-family: 'Open Sans';
     text-align: center;
     color: #777;
@@ -1009,10 +1072,10 @@ form::-webkit-scrollbar {
     margin-top: 5px;
     width: 90%;
     font-family: 'Open Sans';
-    font-size: 12px;
+    font-size: 10px;
     color: #777;
-    text-align: center;
-    line-height: 30px;
+    text-align: left;
+    line-height: 15px;
   }
 
   .side-img {
@@ -1021,16 +1084,16 @@ form::-webkit-scrollbar {
   }
 
   .side-name {
-    font-size: 14px;
+    font-size: 12px;
   }
 
   .side-title {
-    font-size: 12px;
+    font-size: 10px;
   }
 
   .side-content {
     width: 70%;
-    font-size: 10px;
+    font-size: 8px;
     margin-top: 5px;
   }
 
@@ -1094,6 +1157,11 @@ form::-webkit-scrollbar {
 }
 
 @media only screen and (max-width: 740px) {
+
+  .js-modal-active {
+    min-width: 80vw;
+  }
+
   .nav-links {
     width: 70%;
   }
@@ -1187,6 +1255,10 @@ form::-webkit-scrollbar {
     margin-top: -20px;
   }
 
+  .full-quote {
+    color: #444;
+  }
+
   .order1 {
     margin-top: 30px;
   }
@@ -1221,6 +1293,15 @@ form::-webkit-scrollbar {
 }
 
 @media only screen and (max-width: 630px) {
+
+  .card-content {
+    overflow-y: scroll;
+  }
+
+  .side-content {
+    oveflow-y: scroll;
+  }
+
   .resources-section {
     height: 450px;
   }
@@ -1418,4 +1499,14 @@ form::-webkit-scrollbar {
     left: 3px;
     background-color: #c12b5b;
   }
+
+  .mission-modal {
+    padding: 5px;
+  }
+
+  .mission-list-text {
+    font-size: 12px;
+    margin-left: -15px;
+  }
+  
 }

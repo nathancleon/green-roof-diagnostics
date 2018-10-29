@@ -6,6 +6,8 @@ $(document).ready(function () {
   populateDivs();
   stickyNav();
   showRotationalContent();
+  viewMissionStatement()
+  closeMissionStatement();
   imageSlider();
   peopleCardsData();
   peopleModal();
@@ -25,6 +27,10 @@ function populateDivs() {
         `Green infrastructure focuses on cost-effective, living, ${em}upstream${_em} solutions. And there is no-where farther up stream than the roof!`,
         `${em}<a href='http://bradgarner.com' target='_blank'>Green infrastructure</a>${_em} is so powerful, because it harnesses the power of nature to provide primary and ${em}secondary benefits${_em}`,
       ],
+      fullQuote: [
+        `Green infrastructure focuses on cost-effective, living, upstream solutions. And there is no-where farther up stream than the roof!`,
+        `<a href='http://bradgarner.com' target='_blank'>Green infrastructure</a> is so powerful, because it harnesses the power of nature to provide primary and secondary benefits`,
+      ],
     },
     {
       id: 'content02', // id of the section; must be a match
@@ -36,6 +42,10 @@ function populateDivs() {
       quotes: [
         `Green Roof Diagnostics was founded to provide scientific and technical leadership within the green roof industry. Our success is when ${em}all sails rise${_em}.`,
         `${em}Testing${_em} is critical to our work. We test products and concepts from anyone. We try to handle this work in a rigorous, ${em}data-driven${_em} manner for optimal benefit to all parties.`,
+      ],
+      fullQuote: [
+        `Green infrastructure focuses on cost-effective, living, upstream solutions. And there is no-where farther up stream than the roof!`,
+        `<a href='http://bradgarner.com' target='_blank'>Green infrastructure</a> is so powerful, because it harnesses the power of nature to provide primary and secondary benefits`,
       ],
     },
     {
@@ -49,6 +59,10 @@ function populateDivs() {
         `We measure, quantify, and ${em}validate${_em} the effectiveness of green infrastructure. We think the industry benefits from this ${em}de-mystification${_em}.`,
         `We help design teams can utilize green roofs ${em}confidently${_em}, with ${em}ROI${_em} for the developer and the environment.`,
       ],
+      fullQuote: [
+        `Green infrastructure focuses on cost-effective, living, upstream solutions. And there is no-where farther up stream than the roof!`,
+        `<a href='http://bradgarner.com' target='_blank'>Green infrastructure</a> is so powerful, because it harnesses the power of nature to provide primary and secondary benefits`,
+      ],
     },
     {
       id: 'content04', // id of the section; must be a match
@@ -61,6 +75,10 @@ function populateDivs() {
         `Responding and adapting to our climate requires ${em}innovation${_em}, and the best ideas may come from anywhere!`,
         `We help ${em}manufacturers and inventors${_em} evaluate their ${em}sustainable solutions${_em}, through rigorous testing and monitoring.`,
       ],
+      fullQuote: [
+        `Green infrastructure focuses on cost-effective, living, upstream solutions. And there is no-where farther up stream than the roof!`,
+        `<a href='http://bradgarner.com' target='_blank'>Green infrastructure</a> is so powerful, because it harnesses the power of nature to provide primary and secondary benefits`,
+      ],
     },
     {
       id: 'content05', // id of the section; must be a match
@@ -72,6 +90,10 @@ function populateDivs() {
       quotes: [
         `Green infrastructure is ${em}alive!${_em}  Our work is holistic, including ${em}soil biology${_em} and ${em}water quality${_em}.`,
         `Though synergistic benefits are well understood within larger ecosystems, such as forests and meadows, the biology and chemistry of smaller, more ${em}urban ecosystems${_em} possesses mysteries we aim to unlock and harness for good.`,
+      ],
+      fullQuote: [
+        `Green infrastructure focuses on cost-effective, living, upstream solutions. And there is no-where farther up stream than the roof!`,
+        `<a href='http://bradgarner.com' target='_blank'>Green infrastructure</a> is so powerful, because it harnesses the power of nature to provide primary and secondary benefits`,
       ],
     },
   ];
@@ -97,7 +119,8 @@ function populateDivs() {
     const reverseQuote = i % 2 === 0 ? '' : 'order2';
     const reverseImage = i % 2 === 0 ? '' : 'order1';
 
-    const h = `<div class="section_content">
+    const h = 
+    `<div class="section_content">
       <div class="content-copy ${reverseQuote}">
         <div class="image-container">
           <div class="img-round" style="background-image: url(${c.headshot});"></div>
@@ -112,6 +135,15 @@ function populateDivs() {
               <p>read more about ${c.name}</p>
             </div>
             <p class="content-author">~ ${c.author}</p>
+          </div>
+        </div>
+        <div class="${c.id}modal read-more-modal">
+        <svg class="modal-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="#bbb" d="M207.6 256l107.72-107.72c6.23-6.23 6.23-16.34 0-22.58l-25.03-25.03c-6.23-6.23-16.34-6.23-22.58 0L160 208.4 52.28 100.68c-6.23-6.23-16.34-6.23-22.58 0L4.68 125.7c-6.23 6.23-6.23 16.34 0 22.58L112.4 256 4.68 363.72c-6.23 6.23-6.23 16.34 0 22.58l25.03 25.03c6.23 6.23 16.34 6.23 22.58 0L160 303.6l107.72 107.72c6.23 6.23 16.34 6.23 22.58 0l25.03-25.03c6.23-6.23 6.23-16.34 0-22.58L207.6 256z"/></svg>
+          <div class="read-more-modal-content">
+            <h2 class="copy-header">${c.title}</h2>
+            <div class="full-quote-container">
+              <p class="full-quote">${c.fullQuote.join(' ')}</p>
+            </div>
           </div>
         </div>
       </div>
@@ -149,7 +181,25 @@ function populateDivs() {
     $(`#${c.id}`).on('click', '#greeningReadMore', function () {
       console.log(c.name);
     });
+    
+    $(`#${c.id}ReadMore`).on('click', function(event) {
+      event.preventDefault();
+      $(`.${c.id}modal`).addClass('js-modal-active');
+      $('.overlay').css('display', 'block');
+    });
 
+    $('.overlay').on('click', function() {
+      if($('.js-modal-active').length > 0) {
+        $('.read-more-modal').removeClass('js-modal-active');
+        $('.overlay').css('display', 'none');
+      }
+    });
+
+    $('.modal-close').on('click', function(event) {
+      event.preventDefault();
+      $('.read-more-modal').removeClass('js-modal-active');
+      $('.overlay').css('display', 'none');
+    });
   });
 }
 
@@ -176,6 +226,28 @@ function showRotationalContent() {
       isVisible = true;
       $('.rotational-content').css('visibility', 'visible').hide().fadeIn(1000);
     }
+  });
+}
+
+function viewMissionStatement() {
+  $('.mission-btn').on('click', function(event) {
+    event.preventDefault();
+    $('.mission-modal').addClass('js-modal-active');
+    $('.overlay').css('display', 'block');
+  });
+}
+
+function closeMissionStatement() {
+  $('.overlay').on('click', function() {
+    if($('.js-modal-active').length > 0) {
+      $('.mission-modal').removeClass('js-modal-active');
+      $('.overlay').css('display', 'none');
+    }
+  });
+  $('.modal-close').on('click', function(event) {
+    event.preventDefault();
+    $('.mission-modal').removeClass('js-modal-active');
+    $('.overlay').css('display', 'none');
   });
 }
 
@@ -242,7 +314,7 @@ function peopleCardsData() {
       cardImg: "./assets/people/oscar-warmerdam.jpeg",
       name: "Oscar Warmerdam",
       title: "CEO",
-      bio: "I am intrigued by the possibility of creating sustainable ecosystems within cities",
+      bio: "I am intrigued by the possibility of creating sustainable ecosystems within cities. I am excited to work together with the highly qualified experts at GRD to create cutting-edge research that will have positive, direct and profound impacts on our future lives.",
       fullBio: "I am intrigued by the possibility of creating sustainable ecosystems within cities"
     },
     {
