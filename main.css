@@ -433,51 +433,6 @@ header {
   overflow-y: scroll;
 }
 
-.modal-close {
-  position: absolute;
-  width: 20px;
-  top: 10px;
-  right: 15px;
-  padding: 2px;
-  cursor: pointer;
-}
-
-.js-modal-active {
-  display: flex;
-  flex-direction: column;
-  width: 50vw;
-  position: fixed;
-  padding: 40px;
-  top: 50%;
-  left: 50%;
-  margin-left: auto;
-  background-color: #fafafa;
-  border-radius: 5px;
-  z-index: 2000;
-  transform: translate(-50%, -50%);
-}
-
-/* .copy-open-quote::before {
-  display: block;
-  position: relative;
-  content: url('data:image/svg+xml;charset=UTF-8, <svg xmlns="http://www.w3.org/2000/svg" fill="#8aad33" viewBox="0 0 512 512"><path d="M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8c-88.4 0-160 71.6-160 160v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48zm-288 0H96v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0 103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48z"/></svg>');
-  background-size: 28px 28px;
-  width: 40px;
-  left: -55px;
-  bottom: -15px;
-  z-index: 100;
-}
-
-.copy-close-quote::after {
-  display: block;
-  position: relative;
-  content: url('data:image/svg+xml;charset=UTF-8, <svg xmlns="http://www.w3.org/2000/svg" fill="#8aad33" viewBox="0 0 512 512"><path d="M464 32H336c-26.5 0-48 21.5-48 48v128c0 26.5 21.5 48 48 48h80v64c0 35.3-28.7 64-64 64h-8c-13.3 0-24 10.7-24 24v48c0 13.3 10.7 24 24 24h8c88.4 0 160-71.6 160-160V80c0-26.5-21.5-48-48-48zm-288 0H48C21.5 32 0 53.5 0 80v128c0 26.5 21.5 48 48 48h80v64c0 35.3-28.7 64-64 64h-8c-13.3 0-24 10.7-24 24v48c0 13.3 10.7 24 24 24h8c88.4 0 160-71.6 160-160V80c0-26.5-21.5-48-48-48z"/></svg>');
-  width: 40px;
-  left: 104%;
-  margin-top: -20px;
-  z-index: 100;
-} */
-
 /****************************************** 
   Image Slider
 ******************************************/
@@ -681,6 +636,42 @@ header {
   line-height: 25px;
 }
 
+.js-card-img {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.js-card-name {
+  font-size: 1.5rem;
+  font-family: 'Open Sans';
+  text-align: center;
+  color: #555;
+}
+
+.js-card-title {
+  margin-top: -5px;
+  font-size: 1rem;
+  font-family: 'Open Sans';
+  text-align: center;
+  color: #777;
+}
+
+.js-card-content {
+  margin: 0 auto;
+  margin-top: 5px;
+  font-family: 'Open Sans';
+  font-size: 14px;
+  color: #777;
+  max-height: 60vh;
+  text-align: left;
+  line-height: 25px;
+  overflow-y: scroll;
+}
+
 .side-img {
   width: 70px;
   height: 70px;
@@ -745,6 +736,10 @@ header {
   width: 25px;
   padding: 5px;
   cursor: pointer;
+}
+
+.people-modal {
+  display: none;
 }
 
 /****************************************** 
@@ -958,6 +953,34 @@ form::-webkit-scrollbar {
   left: 104%;
   margin-top: -20px;
   z-index: 100;
+}
+
+/****************************************** 
+  Modal CSS
+******************************************/
+
+.modal-close {
+  position: absolute;
+  width: 20px;
+  top: 10px;
+  right: 15px;
+  padding: 2px;
+  cursor: pointer;
+}
+
+.js-modal-active {
+  display: flex;
+  flex-direction: column;
+  /* width: 50vw; */
+  position: fixed;
+  padding: 40px;
+  top: 50%;
+  left: 50%;
+  margin-left: auto;
+  background-color: #fafafa;
+  border-radius: 5px;
+  z-index: 2000;
+  transform: translate(-50%, -50%);
 }
 
 /****************************************** 
@@ -1255,10 +1278,6 @@ form::-webkit-scrollbar {
     margin-top: -20px;
   }
 
-  .full-quote {
-    color: #444;
-  }
-
   .order1 {
     margin-top: 30px;
   }
@@ -1509,4 +1528,7 @@ form::-webkit-scrollbar {
     margin-left: -15px;
   }
   
+  .js-card-content {
+    max-height: 40vh;
+  }
 }

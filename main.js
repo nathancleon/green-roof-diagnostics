@@ -10,7 +10,7 @@ $(document).ready(function () {
   closeMissionStatement();
   imageSlider();
   peopleCardsData();
-  peopleModal();
+  closePeopleModal();
 });
 
 function populateDivs() {
@@ -138,7 +138,8 @@ function populateDivs() {
           </div>
         </div>
         <div class="${c.id}modal read-more-modal">
-        <svg class="modal-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="#bbb" d="M207.6 256l107.72-107.72c6.23-6.23 6.23-16.34 0-22.58l-25.03-25.03c-6.23-6.23-16.34-6.23-22.58 0L160 208.4 52.28 100.68c-6.23-6.23-16.34-6.23-22.58 0L4.68 125.7c-6.23 6.23-6.23 16.34 0 22.58L112.4 256 4.68 363.72c-6.23 6.23-6.23 16.34 0 22.58l25.03 25.03c6.23 6.23 16.34 6.23 22.58 0L160 303.6l107.72 107.72c6.23 6.23 16.34 6.23 22.58 0l25.03-25.03c6.23-6.23 6.23-16.34 0-22.58L207.6 256z"/></svg>
+          <svg class="modal-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+            <path fill="#bbb" d="M207.6 256l107.72-107.72c6.23-6.23 6.23-16.34 0-22.58l-25.03-25.03c-6.23-6.23-16.34-6.23-22.58 0L160 208.4 52.28 100.68c-6.23-6.23-16.34-6.23-22.58 0L4.68 125.7c-6.23 6.23-6.23 16.34 0 22.58L112.4 256 4.68 363.72c-6.23 6.23-6.23 16.34 0 22.58l25.03 25.03c6.23 6.23 16.34 6.23 22.58 0L160 303.6l107.72 107.72c6.23 6.23 16.34 6.23 22.58 0l25.03-25.03c6.23-6.23 6.23-16.34 0-22.58L207.6 256z"/></svg>
           <div class="read-more-modal-content">
             <h2 class="copy-header">${c.title}</h2>
             <div class="full-quote-container">
@@ -308,7 +309,7 @@ function peopleCardsData() {
       name: "Anna Zakrisson",
       title: "Soil Biologist",
       bio: "I am intrigued by the possibility of creating sustainable ecosystems within cities. I am excited to work together with the highly qualified experts at GRD to create cutting-edge research that will have positive, direct and profound impacts on our future lives.",
-      fullBio: "I am intrigued by the possibility of creating sustainable ecosystems within cities"
+      fullBio: "I am intrigued by the possibility of creating sustainable ecosystems within cities. As a Ph.D. biologist with degrees in plant science and microbial ecology (Cambridge University, Max-Planck Institute), I am excited to work together with the highly qualified experts at GRD to create cutting-edge research that will have positive, direct and profound impacts on our future lives. My time as VP of Content at a fast-growing digital marketplace made my approach result-orientated and pragmatic, and also made me see the benefits of effective communication. Science communication has since become both a passion and a profession of mine leading to consulting assignments in digital strategy. I also have extensive field-work experience from over 30 marine and jungle expeditions which has made me very resourceful and good at problem-solving. We are living in a rapidly changing world, and if we want to see a sustainable future, we need innovative and creative solutions. The challenge is to achieve true sustainability interweaving ecology, finance, regulations, and local conditions. At GRD I feel that I am doing that: creating a sustainable product with great financial benefits."
     },
     {
       cardImg: "./assets/people/oscar-warmerdam.jpeg",
@@ -322,25 +323,26 @@ function peopleCardsData() {
       name: "Brad Garner",
       title: "Software Engineer",
       bio: "I enjoy data, and I'm passionate about the environment. I also like working on a team with high standards. This is why I'm so happy to be at GRD.",
-      fullBio: "I am intrigued by the possibility of creating sustainable ecosystems within cities"
+      fullBio: "I enjoy data, and I’m passionate about the environment. I also like working on a team with high standards. This is why I’m so happy to be at GRD. I’m responsible for GRD’s monitoring infrastructure, data collection and integrity, software development, and data visualization: basically anything that includes bits or numbers. I find this rewarding, largely due to my mutt of a professional background. I practiced traditional landscape architecture for 13 years, working with architects, developers, engineers, and environmental agencies. Then I led operations and product development at another green roof company, where I was exposed to more of the same parties, but from different perspective. Those 6 years taught me a lot about stormwater regulations, and were my start into stormwater research. In both prior careers I worked in construction: first in construction administration, then later in the construction supply chain. After two decades of design and construction work, I am thrilled to work on a team that is focused on delivering unsurpassed products and services to the design and construction industry. Otherwise I might view my job as writing functions, creating graphs, and managing databases. Instead I know those are just things I need to do, but my real work is helping professionals find better stormwater solutions, navigate the maze of data, and make more informed decisions."
     },
     {
       cardImg: "./assets/people/joshua-robinson.jpeg",
       name: "Joshua Robinson",
       title: "Stormwater Engineer",
       bio: "Growing up along a tidal creek in coastal South Carolina, I have always been inspired and humbled by the order and complexity of the natural world.",
-      fullBio: "I am intrigued by the possibility of creating sustainable ecosystems within cities"
+      fullBio: "Growing up along a tidal creek in coastal South Carolina, I have always been inspired and humbled by the order and complexity of the natural world. My fascination with natural systems, coupled with my passion for design, led me to study engineering as an undergraduate, and then to graduate research in the burgeoning field of environmental hydraulics. This work introduced me to streams and entire watersheds that had been devastated by the effects of urbanization. Since then, I have worked to repair natural systems, and equally, to engender a spirit of land stewardship that views stormwater as a resource instead of a waste product. I am a licensed professional engineer with over fifteen years of experience as a water resources engineer, ecological engineer, and consulting hydrologist in private practice. I have extensive experience in the planning, design, engineering, permitting, construction, and management of aquatic ecosystem restoration and green stormwater infrastructure projects. My work represents a unique combination of ideas, rigorous scientific analysis, and design. In 2008, I founded Robinson Design Engineers, a collaborative consulting practice with offices in Charleston, SC and Asheville, NC. Since then, I have led a team of talented engineers, hydrologists, and designers engaged in a variety of project types. Through the years, in our struggle to find data-driven, physically-based methods for designing and managing living infrastructure systems, we began doing our own internal research to guide our work. This pursuit led to a collaboration that took shape as Green Roof Diagnostics. I’m thrilled for the opportunity to contribute the important work of elevating green infrastructure in professional practice and policy."
     },
     {
       cardImg: "./assets/people/laura-supple.jpeg",
       name: "Laura Supple",
       title: "Environmental Engineer",
       bio: "I am fascinated by the complex interactions between humans, nature, and the built environment. My passion for sustainable development has led me to volunteer on organic farms in Europe, the Americas, and New Zealand.",
-      fullBio: "I am intrigued by the possibility of creating sustainable ecosystems within cities"
+      fullBio: "I am fascinated by the complex interactions between humans, nature, and the built environment. My passion for sustainable development has led me to volunteer on organic farms in Europe, the Americas, and New Zealand. I’ve also led design of stormwater infrastructure for government clients and implementation of urban streetscape projects for disadvantaged neighborhoods in Baltimore. I want to employ cutting-edge research to develop sustainable solutions to pressing challenges of the urban environment. I have experience in interdisciplinary research of urban stream restoration, landscape hydrology, global food ethics, sustainability policy, and electricity generation infrastructure modeling. At GRD, I manage laboratory operations, collect and analyze data, and collaborate on modeling efforts. Being on the GRD team allows me to bridge divides between disciplines and communicate scientific research in a way that is clear and compelling."
     }
   ];
 
   peopleCards(index, people);
+  viewPeopleModal(people);
 
   $('.click-left').click(function() {
     index.left = decrementPeopleIndex(index.left, people.length);
@@ -373,13 +375,6 @@ function incrementPeopleIndex(index, length) {
   }
 }
 
-function peopleModal() {
-  $('.btn-mid').click(function() {
-    let data = $('.btn-mid').data('index');
-  });
-}
-
-
 function peopleCards(index, people) {
   $('.card-left').children('.card-img').attr('src', `${people[index.left].cardImg}`);
   $('.card-left').children('.card-name').html(`${people[index.left].name}`);
@@ -398,4 +393,32 @@ function peopleCards(index, people) {
   $('.card-right').children('.card-title').html(`${people[index.right].title}`);
   $('.card-right').children('.card-content').html(`${people[index.right].bio}`);
 
+}
+
+function viewPeopleModal(people) {
+  $('.btn-mid').click(function() {
+    event.preventDefault();
+    let data = $('.btn-mid').data('index');
+    $('.people-modal').addClass('js-modal-active');
+    $('.overlay').css('display', 'block');
+
+    $('.js-card-img').attr('src', people[data].cardImg);
+    $('.js-card-name').html(people[data].name);
+    $('.js-card-title').html(people[data].title);
+    $('.js-card-content').html(people[data].fullBio);
+  });
+}
+
+function closePeopleModal() {
+  $('.overlay').on('click', function() {
+    if($('.js-modal-active').length > 0) {
+      $('.people-modal').removeClass('js-modal-active');
+      $('.overlay').css('display', 'none');
+    }
+  });
+  $('.modal-close').on('click', function() {
+    event.preventDefault();
+    $('.people-modal').removeClass('js-modal-active');
+    $('.overlay').css('display', 'none');
+  });
 }
