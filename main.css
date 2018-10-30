@@ -1001,11 +1001,11 @@ form::-webkit-scrollbar {
   }
 
   .section {
-    height: 1000px;
+    height: 800px;
   }
 
   .center {
-    margin-top: 30%;
+    margin-top: 20%;
   }
 
   .card-content {
@@ -1014,6 +1014,10 @@ form::-webkit-scrollbar {
 
   .side-content {
     font-size: 12px;
+  }
+
+  .resources-section {
+    height: 700px;
   }
 
 }
