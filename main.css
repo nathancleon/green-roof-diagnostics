@@ -1322,16 +1322,15 @@ form::-webkit-scrollbar {
 
   .new-content {
     flex-direction: column;
-    width: 70%;
+    width: 60%;
   }
 
   .new-content_thumbnail {
-    height: 20vh;
+    height: 200px;
     width: 100%;
   }
 
   .new-content_text {
-    height: 25vh;
     width: 80%;
   }
 
@@ -1420,12 +1419,12 @@ form::-webkit-scrollbar {
 
 @media only screen and (max-width: 510px) {
 
-  .new-content_thumbnail {
-    height: 20vh;
+  .new-content {
+    width: 60%;
   }
 
-  .new-content_text {
-    height: 20vh;
+  .new-content_thumbnail {
+    height: 150px;
   }
 
   .nav-links {
@@ -1475,15 +1474,15 @@ form::-webkit-scrollbar {
 @media only screen and (max-width: 420px) {
 
   .new-content {
-    width: 90%;
+    width: 70%;
   }
 
   .new-content_thumbnail {
-    height: 20vh;
+    height: 100px;
   }
 
   .new-content_text {
-    height: 28vh;
+    /* height: 28vh; */
   }
 
   .nav-links {
