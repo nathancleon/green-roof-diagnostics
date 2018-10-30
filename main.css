@@ -637,7 +637,7 @@ header {
   line-height: 25px;
 }
 
-.js-card-img {
+.js-card-img, .bio-card-img {
   width: 100px;
   height: 100px;
   position: relative;
@@ -646,14 +646,14 @@ header {
   margin: 0 auto;
 }
 
-.js-card-name {
+.js-card-name, .bio-card-name {
   font-size: 1.5rem;
   font-family: 'Open Sans';
   text-align: center;
   color: #555;
 }
 
-.js-card-title {
+.js-card-title, .bio-card-title {
   margin-top: -5px;
   font-size: 1rem;
   font-family: 'Open Sans';
@@ -661,7 +661,7 @@ header {
   color: #777;
 }
 
-.js-card-content {
+.js-card-content, .bio-card-content {
   margin: 0 auto;
   margin-top: 5px;
   font-family: 'Open Sans';
@@ -742,6 +742,10 @@ header {
 }
 
 .people-modal {
+  display: none;
+}
+
+.read-more-bio {
   display: none;
 }
 
@@ -974,7 +978,6 @@ form::-webkit-scrollbar {
 .js-modal-active {
   display: flex;
   flex-direction: column;
-  /* width: 50vw; */
   position: fixed;
   padding: 40px;
   top: 50%;

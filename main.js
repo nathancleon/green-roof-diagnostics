@@ -174,7 +174,7 @@ function populateDivs() {
       </div>
     </div>`;
 
-    $(`#${c.id}`).html(h);
+    $(`#${c.id}`).append(h);
     if (i % 2 === 0) {
       $(`#${c.id}`).addClass('bg-color');
     }
@@ -202,6 +202,9 @@ function populateDivs() {
       $('.overlay').css('display', 'none');
     });
   });
+
+  viewBioModal();
+  closeBioModal();
 }
 
 function stickyNav() {
@@ -419,6 +422,29 @@ function closePeopleModal() {
   $('.modal-close').on('click', function() {
     event.preventDefault();
     $('.people-modal').removeClass('js-modal-active');
+    $('.overlay').css('display', 'none');
+  });
+}
+
+function viewBioModal() {
+  $('.content-author-container').click(function() {
+    let bioModal = $(this).parent().parent().parent().children('.read-more-bio');
+    event.preventDefault();
+    $(bioModal).addClass('js-modal-active');
+    $('.overlay').css('display', 'block');
+  });
+}
+
+function closeBioModal() {
+  $('.overlay').on('click', function() {
+    if($('.js-modal-active').length > 0) {
+      $('.read-more-bio').removeClass('js-modal-active');
+      $('.overlay').css('display', 'none');
+    }
+  });
+  $('.modal-close').on('click', function() {
+    event.preventDefault();
+    $('.read-more-bio').removeClass('js-modal-active');
     $('.overlay').css('display', 'none');
   });
 }
