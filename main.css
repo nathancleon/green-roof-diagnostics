@@ -121,7 +121,7 @@ header {
   justify-content: center;
   flex-direction: column;
   width: 100%;
-  border-bottom: 2px solid #ddd;
+  border-bottom: 1px solid #ddd;
   visibility: hidden;
 }
 
