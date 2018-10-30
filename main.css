@@ -130,7 +130,7 @@ header {
   margin-bottom: 100px;
   position: relative;
   display: flex;
-  width: 90%;
+  width: 60%;
   border: 1px solid #ddd;
   border-radius: 2px;
   background-color: #fff;
@@ -162,9 +162,8 @@ header {
 }
 
 .new-content_thumbnail {
-  width: 30%;
+  width: 20%;
   overflow: hidden;
-  margin-right: 50px;
 }
 
 .content_img {
@@ -175,7 +174,8 @@ header {
 .new-content_text {
   display: flex;
   flex-direction: column;
-  width: 60%;
+  justify-content: center;
+  width: 70%;
   padding: 5px;
   border-radius: 2px;
   margin: 0 auto;
@@ -877,7 +877,7 @@ form::-webkit-scrollbar {
 }
 
 .footer-content2 {
-  margin-top: -20px;
+  margin-top: -25px;
 }
 
 .footer-contact {
@@ -990,7 +990,48 @@ form::-webkit-scrollbar {
   Media Queries
 ******************************************/
 
+@media only screen and (min-width: 1441px) {
+
+  .new-content {
+    width: 55%;
+  }
+  
+  .article-text {
+    font-size: 18px;
+  }
+
+  .section {
+    height: 1000px;
+  }
+
+  .center {
+    margin-top: 30%;
+  }
+
+  .card-content {
+    font-size: 16px;
+  }
+
+  .side-content {
+    font-size: 12px;
+  }
+
+}
+
 @media only screen and (max-width: 1160px) {
+
+  .new-content {
+    width: 70%;
+  }
+
+  .new-content_thumbnail {
+    width: 30%;
+  }
+
+  .new-content_text {
+    width: 60%;
+  }
+
   .section {
     flex-direction: column;
   }
@@ -1153,8 +1194,6 @@ form::-webkit-scrollbar {
     position: relative;
   }
 
-  .mission-copy_header:after {}
-
   .content-img {
     order: 1;
     width: 100%;
@@ -1176,12 +1215,28 @@ form::-webkit-scrollbar {
     width: 75%;
   }
 
+  .people-modal {
+    width: 70%;
+  }
+
   .resources-section {
     height: 700px;
   }
 }
 
 @media only screen and (max-width: 740px) {
+
+  .new-content {
+    width: 80%;
+  }
+
+  .new-content_thumbnail {
+    width: 30%;
+  }
+
+  .new-content_text {
+    width: 60%;
+  }
 
   .js-modal-active {
     min-width: 80vw;
@@ -1260,6 +1315,21 @@ form::-webkit-scrollbar {
 }
 
 @media only screen and (max-width: 630px) {
+
+  .new-content {
+    flex-direction: column;
+    width: 70%;
+  }
+
+  .new-content_thumbnail {
+    height: 20vh;
+    width: 100%;
+  }
+
+  .new-content_text {
+    height: 25vh;
+    width: 80%;
+  }
 
   .card-content {
     overflow-y: scroll;
@@ -1345,27 +1415,21 @@ form::-webkit-scrollbar {
 }
 
 @media only screen and (max-width: 510px) {
+
+  .new-content_thumbnail {
+    height: 20vh;
+  }
+
+  .new-content_text {
+    height: 20vh;
+  }
+
   .nav-links {
     width: 80%;
   }
 
-  .new-content {
-    flex-direction: column;
-  }
-
-  .new-content_thumbnail {
-    height: 30vh;
-    width: 100%;
-  }
-
   .content_img {
     width: 100%;
-  }
-
-  .new-content_text {
-    height: 40vh;
-    width: 80%;
-    padding-top: 40px;
   }
 
   .order2 {
@@ -1397,9 +1461,27 @@ form::-webkit-scrollbar {
     left: 3px;
     background-color: #c12b5b;
   }
+
+  .people-modal {
+    width: 90%;
+    padding: 20px;
+  }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 420px) {
+
+  .new-content {
+    width: 90%;
+  }
+
+  .new-content_thumbnail {
+    height: 20vh;
+  }
+
+  .new-content_text {
+    height: 28vh;
+  }
+
   .nav-links {
     width: 100%;
   }
@@ -1440,8 +1522,21 @@ form::-webkit-scrollbar {
     font-size: 12px;
     margin-left: -15px;
   }
+
+  .people-modal {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .card-content { 
+    max-height: 15vh;
+    overflow-y: scroll;
+  }
   
   .js-card-content {
-    max-height: 40vh;
+    max-height: 30vh;
+    font-size: 12px;
+    line-height: 18px;
+    width: 100%;
   }
 }
